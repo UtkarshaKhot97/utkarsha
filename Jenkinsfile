@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'java -version'
+                sh 'pwd'
                 echo 'Build Successfully'
             }
         }

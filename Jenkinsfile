@@ -4,9 +4,12 @@ pipeline {
                     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
     }
     stages {
-        stage('Hello') {
+        stage('SCM-checkout') {
             steps {
-                echo 'Hello World'
+                sh 'rm -rf game-of-life'
+                sh 'git clone https://github.com/UtkarshaKhot97/game-of-life.git'
+                 echo 'SCM-checkout successfull'
+                
             }
         }
         stage('Build') {

@@ -30,7 +30,12 @@ pipeline {
         }
         stage ('Test'){
             steps {
-                echo 'for build numbers /$ { BUILD_NUMBERS} -> ${BUILD_NUMBERS}'
+                script {
+                    
+                    def buildNumber = env.BUILD_NUMBER
+                    echo "Build Number: ${buildNumber}"
+                }
+                //echo 'for build numbers /$ { BUILD_NUMBERS} -> ${BUILD_NUMBERS}'
                 sh 'mvn -version'
                 echo 'Test successfull'
             }

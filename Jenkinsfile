@@ -30,6 +30,7 @@ pipeline {
         }
         stage ('Test'){
             steps {
+                echo 'for build numbers /$ { BUILD_NUMBERS} -> ${BUILD_NUMBERS}'
                 sh 'mvn -version'
                 echo 'Test successfull'
             }

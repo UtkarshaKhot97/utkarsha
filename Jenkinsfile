@@ -7,7 +7,7 @@ pipeline {
         stage('SCM checkout') {
             steps {
                 sh 'rm -rf game-of-life'
-                sh git clone https://github.com/UtkarshaKhot97/game-of-life.git
+                sh 'git clone https://github.com/UtkarshaKhot97/game-of-life.git'
                  echo 'SCM checkout successfull'
             }
         }

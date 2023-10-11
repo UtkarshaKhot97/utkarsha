@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh 'rm -rf game-of-life'
                 sh git clone https://github.com/UtkarshaKhot97/game-of-life.git
-                echo 'SCM checkout successfull'
+                 echo 'SCM checkout successfull'
             }
         }
         stage('Build') {
@@ -20,8 +20,8 @@ pipeline {
         stage ('Test'){
             steps {
                 sh 'mvn -version'
-                sh 'cd .'
-                echo 'Build successfull'
+                echo 'Test successfull'
+            }
         }
         stage('Deploy') {
             steps {
@@ -33,4 +33,4 @@ pipeline {
     }
 }
 
-}
+

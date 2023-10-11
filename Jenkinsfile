@@ -21,7 +21,10 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'pwd'
+                sh '''
+                touch utkarsha.txt
+                pwd
+                '''
                 echo 'Build Successfully'
             }
         }
